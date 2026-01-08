@@ -1,0 +1,117 @@
+/* ===============================
+   GLOBAL
+================================ */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+.sidebar {
+  width: 220px;
+  background: #15803d;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===============================
+   MAIN (BACKGROUND OPACITY FIX)
+================================ */
+.main {
+  position: relative;
+  flex: 1;
+  padding: 30px;
+  background: url("../images/backgrounds/farm.jpg") center / cover no-repeat;
+  overflow: hidden;
+}
+
+/* BACKGROUND OVERLAY */
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* 🔽 adjust opacity here */
+  z-index: 0;
+}
+
+/* KEEP CONTENT ABOVE OVERLAY */
+.main > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   FARMERS SECTION
+================================ */
+.farmers {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.farmer-card {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.farmer-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.farmer-card h3 {
+  margin: 10px 0 5px;
+}
+
+.farmer-card p {
+  margin-bottom: 15px;
+  color: #a7f3d0;
+}
