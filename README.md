@@ -14,6 +14,7 @@ The project is lightweight, user-friendly, and hosted using **GitHub Pages**.
 ## 📌 Features
 
 - 📊 **Dashboard Overview**
+
 - 🌦 **Weather Information**
 - 🌱 **Fields Status**
 - 📡 **IoT Sensors Monitoring**

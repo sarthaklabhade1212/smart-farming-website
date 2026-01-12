@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Smart Farming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <img src="images/logo.png" alt="Smart Farming Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html" class="active">Register</a>
+        </nav>
+    </header>
+
+    <!-- Registration Form -->
+    <section class="register-section">
+        <div class="register-card">
+            <h2>Create Account</h2>
+
+            <form id="registerForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+
+                <select required>
+                    <option value="">Select Role</option>
+                    <option value="farmer">Farmer</option>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="#">Login</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="js/register.js"></script>
+</body>
+</html>

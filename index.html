@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <title>Register | Smart Farming</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
 
+  <!-- Sidebar -->
   <aside class="sidebar">
     <img src="images/logo.png" class="logo">
 
@@ -19,43 +20,55 @@
       <a href="sensors.html">IoT Sensors</a>
       <a href="fertiliser.html">Fertiliser</a>
       <a href="reports.html">Reports</a>
+      <a href="register.html" class="active">Register</a>
     </nav>
   </aside>
 
+  <!-- Main Content -->
   <main class="main">
-    <h1>Farm Overview</h1>
+    <h1>User Registration</h1>
 
-    <div class="cards">
-      <div class="card">🌱 Crop Health<br><b>Good</b></div>
-      <div class="card">💧 Soil Moisture<br><b>68%</b></div>
-      <div class="card">🌡 Temperature<br><b>29°C</b></div>
-    </div>
+    <div class="register-container">
+      <form class="register-form" id="registerForm">
 
-    <h2>Our Farmers</h2>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
 
-    <div class="farmers">
-      <div class="farmer-card">
-        <img src="images/farmers/farmer1.jpg">
-        <h3>Ramesh Patil</h3>
-        <p>Wheat & Rice</p>
-      </div>
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
 
-      <div class="farmer-card">
-        <img src="images/farmers/farmer2.jpg">
-        <h3>Suresh Kale</h3>
-        <p>Vegetables</p>
-      </div>
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="Enter mobile number" required>
 
-      <div class="farmer-card">
-        <img src="images/farmers/farmer3.jpg">
-        <h3> Pawar</h3>
-        <p>Wheat</p>
-      </div>
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password" required>
+
+        <label>Role</label>
+        <select required>
+          <option value="">Select role</option>
+          <option>Farmer</option>
+          <option>Admin</option>
+          <option>Student</option>
+        </select>
+
+        <button type="submit">Register</button>
+
+      </form>
     </div>
 
   </main>
 </div>
 
 <script src="js/script.js"></script>
+<script>
+  document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Registration successful (UI only)");
+  });
+</script>
+
 </body>
 </html>
