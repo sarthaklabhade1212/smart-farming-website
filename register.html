@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Register | Smart Farming</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/register.css">
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="navbar">
-        <img src="images/logo.png" alt="Smart Farming Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="register.html" class="active">Register</a>
-        </nav>
-    </header>
+<div class="container">
 
-    <!-- Registration Form -->
-    <section class="register-section">
-        <div class="register-card">
-            <h2>Create Account</h2>
+  <aside class="sidebar">
+    <img src="images/logo.png" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </aside>
 
-            <form id="registerForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Mobile Number" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
+  <main class="main">
+    <h1>User Registration</h1>
 
-                <select required>
-                    <option value="">Select Role</option>
-                    <option value="farmer">Farmer</option>
-                    <option value="admin">Admin</option>
-                    <option value="student">Student</option>
-                </select>
+    <div class="register-container">
+      <form id="registerForm" class="register-form">
 
-                <button type="submit">Register</button>
-            </form>
+        <label>Full Name</label>
+        <input type="text" required>
 
-            <p class="login-text">
-                Already have an account?
-                <a href="#">Login</a>
-            </p>
-        </div>
-    </section>
+        <label>Email</label>
+        <input type="email" required>
 
-    <!-- JS -->
-    <script src="js/register.js"></script>
+        <label>Password</label>
+        <input type="password" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/register.js"></script>
 </body>
 </html>

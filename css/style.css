@@ -1,6 +1,3 @@
-/* ===============================
-   GLOBAL
-================================ */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,9 +5,7 @@ body {
   color: white;
 }
 
-/* ===============================
-   HOME PAGE (LANDING)
-================================ */
+/* HOME */
 .home-container {
   height: 100vh;
   display: flex;
@@ -18,8 +13,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("../images/backgrounds/farm.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("../images/backgrounds/farm.jpg") center/cover no-repeat;
 }
 
 .home-logo {
@@ -27,54 +22,30 @@ body {
   margin-bottom: 20px;
 }
 
-.home-container h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.home-container p {
-  max-width: 500px;
-  opacity: 0.85;
-}
-
 .home-buttons {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .btn {
-  display: inline-block;
   padding: 12px 26px;
   margin: 10px;
   background: #22c55e;
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #16a34a;
 }
 
 .btn.secondary {
   background: #2563eb;
 }
 
-.btn.secondary:hover {
-  background: #1e40af;
-}
-
-/* ===============================
-   LAYOUT (DASHBOARD)
-================================ */
+/* LAYOUT */
 .container {
   display: flex;
   min-height: 100vh;
 }
 
-/* ===============================
-   SIDEBAR
-================================ */
+/* SIDEBAR */
 .sidebar {
   width: 220px;
   background: #15803d;
@@ -83,107 +54,59 @@ body {
 
 .logo {
   width: 120px;
-  margin-bottom: 20px;
 }
 
 .sidebar nav a {
   display: block;
-  color: white;
   padding: 10px;
+  color: white;
   text-decoration: none;
-  border-radius: 6px;
-  margin-bottom: 6px;
 }
 
-.sidebar nav a:hover,
 .sidebar nav a.active {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255,255,255,.3);
 }
 
-/* ===============================
-   MAIN (BACKGROUND OPACITY FIX)
-================================ */
+/* MAIN */
 .main {
-  position: relative;
   flex: 1;
   padding: 30px;
-  background: url("../images/backgrounds/farm.jpg") center / cover no-repeat;
-  overflow: hidden;
+  background: url("../images/backgrounds/farm.jpg") center/cover no-repeat;
+  position: relative;
 }
 
-/* BACKGROUND OVERLAY */
 .main::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
+  background: rgba(0,0,0,.55);
 }
 
-/* KEEP CONTENT ABOVE OVERLAY */
 .main > * {
   position: relative;
   z-index: 1;
 }
 
-/* ===============================
-   DASHBOARD CARDS
-================================ */
+/* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 20px;
 }
 
 .card {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,.6);
   padding: 20px;
   border-radius: 10px;
 }
 
-/* ===============================
-   FARMERS SECTION
-================================ */
-.farmers {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.farmer-card {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.farmer-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.farmer-card h3 {
-  margin: 10px 0 5px;
-}
-
-.farmer-card p {
-  margin-bottom: 15px;
-  color: #a7f3d0;
-}
-
-/* ===============================
-   REGISTER PAGE
-================================ */
+/* REGISTER */
 .register-container {
-  max-width: 420px;
-  margin-top: 30px;
-  background: #ffffff;
+  background: white;
+  color: black;
+  max-width: 400px;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  color: #000;
 }
 
 .register-form {
@@ -191,38 +114,14 @@ body {
   flex-direction: column;
 }
 
-.register-form label {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.register-form input,
-.register-form select {
+.register-form input {
+  margin-bottom: 10px;
   padding: 10px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
 }
 
 .register-form button {
-  margin-top: 20px;
   padding: 12px;
+  background: #22c55e;
   border: none;
-  border-radius: 6px;
-  background: #22c55e;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.register-form button:hover {
-  background: #16a34a;
-}
-
-/* ===============================
-   ACTIVE NAV FIX
-================================ */
-.sidebar nav a.active {
-  background: #22c55e;
   color: white;
 }

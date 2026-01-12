@@ -2,73 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register | Smart Farming</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <!-- Sidebar -->
   <aside class="sidebar">
     <img src="images/logo.png" class="logo">
-
     <nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="fields.html">Fields</a>
-  <a href="weather.html">Weather</a>
-  <a href="sensors.html">IoT Sensors</a>
-  <a href="fertiliser.html">Fertiliser</a>
-  <a href="reports.html">Reports</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="fields.html">Fields</a>
+      <a href="weather.html">Weather</a>
+      <a href="sensors.html">IoT Sensors</a>
+      <a href="fertiliser.html">Fertiliser</a>
+      <a href="reports.html">Reports</a>
     </nav>
-
   </aside>
 
-  <!-- Main Content -->
   <main class="main">
-    <h1>User Registration</h1>
+    <h1>Farm Overview</h1>
 
-    <div class="register-container">
-      <form class="register-form" id="registerForm">
-
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your name" required>
-
-        <label>Email</label>
-        <input type="email" placeholder="Enter your email" required>
-
-        <label>Mobile Number</label>
-        <input type="tel" placeholder="Enter mobile number" required>
-
-        <label>Password</label>
-        <input type="password" placeholder="Enter password" required>
-
-        <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm password" required>
-
-        <label>Role</label>
-        <select required>
-          <option value="">Select role</option>
-          <option>Farmer</option>
-          <option>Admin</option>
-          <option>Student</option>
-        </select>
-
-        <button type="submit">Register</button>
-
-      </form>
+    <div class="cards">
+      <div class="card">🌱 Crop Health<br><b>Good</b></div>
+      <div class="card">💧 Soil Moisture<br><b>68%</b></div>
+      <div class="card">🌡 Temperature<br><b>29°C</b></div>
     </div>
-
   </main>
-</div>
 
-<script src="js/script.js"></script>
-<script>
-  document.getElementById("registerForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    alert("Registration successful (UI only)");
-  });
-</script>
+</div>
 
 </body>
 </html>

@@ -1,8 +1,14 @@
-document.getElementById("registerForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("registerForm");
 
-  alert("Registration successful!");
+  if (!form) return;
 
-  // Redirect to dashboard
-  window.location.href = "dashboard.html";
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    alert("Registration successful!");
+
+    // redirect to dashboard
+    window.location.href = "dashboard.html";
+  });
 });
